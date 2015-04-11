@@ -1,2 +1,5 @@
 ---
 # defaults file for bamboo
+
+bamboo_version: 5.8.1
+bamboo_archive_sha256sum: bb691d22273ceaa999eb435dfb4e8d697c3c803505218845bf5785ec2785cbd8

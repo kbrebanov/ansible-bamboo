@@ -1,2 +1,8 @@
 ---
 # vars file for bamboo
+
+bamboo_archive: atlassian-bamboo-{{ bamboo_version }}.tar.gz
+bamboo_download_url: https://www.atlassian.com/software/bamboo/downloads/binary/{{ bamboo_archive }}
+bamboo_work_dir: /opt/atlassian
+bamboo_install_dir: /opt/atlassian/bamboo
+bamboo_home_dir: /var/atlassian/application-data/bamboo
