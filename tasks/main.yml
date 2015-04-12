@@ -92,5 +92,9 @@
   tags: bamboo
 
 - name: Ensure Bamboo service is started and enabled on boot
-  service: name=bamboo state=started pattern=bamboo enabled=yes
+  service: >
+    name=bamboo
+    state=started
+    pattern='/usr/bin/java -Djava.util.logging.config.file=/opt/atlassian/bamboo/atlassian-bamboo-{{ bamboo_version }}/conf/logging.properties'
+    enabled=yes
   tags: bamboo
