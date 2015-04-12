@@ -72,6 +72,13 @@
     creates={{ bamboo_install_dir }}/atlassian-bamboo-{{ bamboo_version }}
   tags: bamboo
 
+- name: Create symlink for current version
+  file: >
+    src={{ bamboo_install_dir }}/atlassian-bamboo-{{ bamboo_version }}
+    dest={{ bamboo_install_dir }}/current
+    state=link
+  tags: bamboo
+
 - name: Create Bamboo init properties
   template: >
     src=bamboo-init.properties.j2
