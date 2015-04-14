@@ -89,6 +89,16 @@
   notify: restart bamboo
   tags: bamboo
 
+- name: Set Bamboo environment settings
+  template: >
+    src=setenv.sh.j2
+    dest={{ bamboo_install_dir }}/atlassian-bamboo-{{ bamboo_version }}/bin/setenv.sh
+    owner=bamboo
+    group=bamboo
+    mode=0755
+  notify: restart bamboo
+  tags: bamboo
+
 - name: Create Bamboo init script
   template: >
     src=bamboo.j2
