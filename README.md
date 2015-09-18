@@ -1,7 +1,7 @@
 bamboo
 ======
 
-[![Ansible Galaxy](https://img.shields.io/badge/galaxy-kbrebanov.bamboo-660198.svg)](https://galaxy.ansible.com/list#/roles/3383)
+[![Ansible Role](https://img.shields.io/ansible/role/3383.svg)](https://galaxy.ansible.com/list#/roles/3383)
 
 Installs Bamboo
 
