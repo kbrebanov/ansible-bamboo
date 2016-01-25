@@ -15,8 +15,8 @@ Role Variables
 
 | Name                      | Default                                                          | Description                  |
 |---------------------------|------------------------------------------------------------------|------------------------------|
-| bamboo_version            | 5.9.7                                                            | Version of Bamboo to install |
-| bamboo_archive_sha256sum  | 4efd7ed85e1b0886ff262ed388aa9049651b2bccffa60bdc59db73fb1609982f | SHA 256 checksum of archive  |
+| bamboo_version            | 5.10.0                                                           | Version of Bamboo to install |
+| bamboo_archive_sha256sum  | 26d3f303d5884056dc5196f42ac8b8f005828d71bbaa342dffbe5d26af9f05b1 | SHA 256 checksum of archive  |
 | bamboo_jvm_minimum_memory | 256m                                                             | Bamboo JVM minimum memory    |
 | bamboo_jvm_maximum_memory | 384m                                                             | Bamboo JVM maximum memory    |
 | bamboo_jvm_stack_size     | 512k                                                             | Bamboo JVM stack size        |
