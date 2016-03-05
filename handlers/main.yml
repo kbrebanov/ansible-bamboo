@@ -2,6 +2,7 @@
 # handlers file for bamboo
 
 - name: restart bamboo
+  become: yes
   service:
     name: bamboo
     state: restarted

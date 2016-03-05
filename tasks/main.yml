@@ -17,6 +17,7 @@
     - bamboo
 
 - name: Create Bamboo group
+  become: yes
   group:
     name: bamboo
     state: present
@@ -24,6 +25,7 @@
     - bamboo
 
 - name: Create Bamboo user
+  become: yes
   user:
     name: bamboo
     group: bamboo
@@ -35,6 +37,7 @@
     - bamboo
 
 - name: Create Bamboo working directory
+  become: yes
   file:
     path: "{{ bamboo_work_dir }}"
     owner: root
@@ -45,6 +48,7 @@
     - bamboo
 
 - name: Create Bamboo install directory
+  become: yes
   file:
     path: "{{ bamboo_install_dir }}"
     owner: bamboo
@@ -55,6 +59,7 @@
     - bamboo
 
 - name: Create Bamboo home directory
+  become: yes
   file:
     path: "{{ bamboo_home_dir }}"
     owner: bamboo
@@ -65,6 +70,7 @@
     - bamboo
 
 - name: Download Bamboo
+  become: yes
   get_url:
     url: "{{ bamboo_download_url }}"
     dest: "{{ bamboo_work_dir }}/{{ bamboo_archive }}"
@@ -73,6 +79,7 @@
     - bamboo
 
 - name: Extract Bamboo to install directory
+  become: yes
   unarchive:
     src: "{{ bamboo_work_dir }}/{{ bamboo_archive }}"
     dest: "{{ bamboo_install_dir }}"
@@ -85,6 +92,7 @@
     - bamboo
 
 - name: Create symlink for current version
+  become: yes
   file:
     src: "{{ bamboo_install_dir }}/atlassian-bamboo-{{ bamboo_version }}"
     dest: "{{ bamboo_install_dir }}/current"
@@ -93,6 +101,7 @@
     - bamboo
 
 - name: Create Bamboo init properties
+  become: yes
   template:
     src: bamboo-init.properties.j2
     dest: "{{ bamboo_install_dir }}/atlassian-bamboo-{{ bamboo_version }}/atlassian-bamboo/WEB-INF/classes/bamboo-init.properties"
@@ -105,6 +114,7 @@
     - bamboo
 
 - name: Set Bamboo environment settings
+  become: yes
   template:
     src: setenv.sh.j2
     dest: "{{ bamboo_install_dir }}/atlassian-bamboo-{{ bamboo_version }}/bin/setenv.sh"
@@ -117,6 +127,7 @@
     - bamboo
 
 - name: Create Bamboo init script
+  become: yes
   template:
     src: bamboo.j2
     dest: /etc/init.d/bamboo
@@ -127,6 +138,7 @@
     - bamboo
 
 - name: Ensure Bamboo service is started and enabled on boot
+  become: yes
   service:
     name: bamboo
     state: started
