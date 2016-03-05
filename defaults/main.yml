@@ -1,8 +1,8 @@
 ---
 # defaults file for bamboo
 
-bamboo_version: 5.10.0
-bamboo_archive_sha256sum: 26d3f303d5884056dc5196f42ac8b8f005828d71bbaa342dffbe5d26af9f05b1
+bamboo_version: 5.10.2
+bamboo_archive_sha256sum: 9d7b3853a2d91f529f8153a2fd57da903e9c1a2bfd91d304428b6598c9af5937
 bamboo_jvm_minimum_memory: 256m
 bamboo_jvm_maximum_memory: 384m
 bamboo_jvm_stack_size: 512k
