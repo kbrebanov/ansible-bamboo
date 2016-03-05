@@ -1,7 +1,7 @@
 bamboo
 ======
 
-[![Ansible Role](https://img.shields.io/ansible/role/3383.svg)](https://galaxy.ansible.com/list#/roles/3383)
+[![Build Status](https://travis-ci.org/kbrebanov/ansible-bamboo.svg?branch=master)](https://travis-ci.org/kbrebanov/ansible-bamboo)
 
 Installs Bamboo
 
